@@ -1,0 +1,29 @@
+.pagination {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 5px;
+}
+
+ul>li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+ul>li>button {
+    border: none;
+}
+
+ul>li>button:focus {
+    background-color: red;
+    color: white;
+}

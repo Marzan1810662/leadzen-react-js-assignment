@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import Pagination from '../Pagination/Pagination';
 import Row from '../Row/Row';
 import './Table.css';
 
 const Table = () => {
     const [info, setInfo] = useState([]);
+    const [count, setCount] = useState(0);
+    const [infoPerPage, setInfoPerPage] = useState(10);
     const [previousPageUrl, setPreviousPageUrl] = useState(null);
     const [currentPageUrl, setCurrentPageUrl] = useState("https://swapi.dev/api/people");
     const [nextPageUrl, setNextPageUrl] = useState("");
@@ -14,6 +17,7 @@ const Table = () => {
             .then(data => {
                 console.log(data);
                 console.log(data.results);
+                setCount(data.count);
                 setPreviousPageUrl(data.previous);
                 setNextPageUrl(data.next);
                 setInfo(data.results)
@@ -26,7 +30,7 @@ const Table = () => {
                     {info.map((i, index) => <Row key={index} info={i} />)}
                 </tbody>
             </table>
-             <button onClick= {() => setCurrentPageUrl(previousPageUrl)}>-</button><button onClick= {() => setCurrentPageUrl(nextPageUrl)}>+</button>
+            <Pagination setCurrentPageUrl={setCurrentPageUrl} currentPageUrl={currentPageUrl} previousPageUrl={previousPageUrl} nextPageUrl={nextPageUrl} count={count} infoPerPage = {infoPerPage}/>
         </div>
     );
 };
