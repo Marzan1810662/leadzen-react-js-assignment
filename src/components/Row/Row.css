@@ -1,0 +1,20 @@
+.row {
+    background-color: white;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    font-size: medium;
+}
+
+td {
+    padding: 50px 30px;
+}
+
+td button{
+    background-color: red;
+    width: 90%;
+    padding:5px 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}

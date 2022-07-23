@@ -1,0 +1,11 @@
+.container{
+    background-color: #f7f5f5;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
