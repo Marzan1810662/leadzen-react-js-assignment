@@ -21,9 +21,14 @@ ul>li {
 
 ul>li>button {
     border: none;
+    background:none;
 }
 
 ul>li>button:focus {
     background-color: red;
     color: white;
+}
+
+button{
+    cursor: pointer;
 }

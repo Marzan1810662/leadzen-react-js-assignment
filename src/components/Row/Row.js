@@ -1,7 +1,7 @@
 import React from 'react';
 import './Row.css';
 
-const Row = ({info}) => {
+const Row = ({ info }) => {
     return (
         <tr className='row'>
             <td>{info.name}</td>
